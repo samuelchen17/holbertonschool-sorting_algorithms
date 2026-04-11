@@ -1,6 +1,11 @@
 #include "sort.h"
 #include <stdio.h>
 
+int partition(int array[], int low, int high, size_t size);
+void quicksort_recursion(int array[], int low, int high, size_t size);
+void swap(int *a, int *b, int *array, size_t size);
+void print_array(const int *array, size_t size);
+
 /**
  * swap - swap two integers in place
  * @a: first integer
@@ -54,9 +59,9 @@ int partition(int array[], int low, int high, size_t size)
 {
 int pivot_value = array[high];
 
-int i = low;
+int i = low, int j = 0;
 
-for (int j = low; j < high; j++)
+for (j = low; j < high; j++)
 {
 if (array[j] < pivot_value)
 {
