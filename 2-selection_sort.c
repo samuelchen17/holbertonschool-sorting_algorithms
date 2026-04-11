@@ -41,6 +41,9 @@ min_index = j;
 
 /* only swap if min_index changes */
 if (min_index != i)
+{
 swap(&array[i], &array[min_index]);
+print_array(array, size);
+}
 }
 }
