@@ -17,7 +17,7 @@ void swap(int *a, int *b, int *array, size_t size)
 {
 int tmp = 0;
 
-if (a == b)
+if (a == b || *a == *b)
 return;
 
 tmp = *a;
